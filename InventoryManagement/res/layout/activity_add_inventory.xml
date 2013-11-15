@@ -1,0 +1,217 @@
+<TableLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    tools:context=".AddInventoryActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000" >
+
+        <TextView
+            android:id="@+id/AddInventoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_5dp"
+            android:layout_weight="1"
+            android:text="@string/text_view_add_inventory"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="@dimen/page_title__25sp" />
+
+    </TableRow>
+    
+	<TableRow
+	    android:id="@+id/tableRow2"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	        android:id="@+id/InventoryTypeTextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:paddingLeft="@dimen/padding_5dp"
+	        android:text="@string/text_view_inventory_type"
+	        android:textSize="@dimen/inventory_addPage_text_23sp" />
+
+	    <EditText
+	        android:id="@+id/AddInventoryTypeEditText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="14"
+	        android:inputType="text"
+	        android:paddingRight="@dimen/padding_5dp">
+			
+	    </EditText>
+	</TableRow>
+	
+	<TableRow
+	    android:id="@+id/tableRow3"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	        android:id="@+id/IMEITextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:paddingLeft="@dimen/padding_5dp"
+	        android:text="@string/text_view_inventory_IMEI"
+	        android:textSize="@dimen/inventory_addPage_text_23sp" />
+
+	    <EditText
+	        android:id="@+id/AddInventoryIMEIEditText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="14"
+	        android:inputType="number"
+	        android:paddingRight="@dimen/padding_5dp" >
+
+	    </EditText>
+	</TableRow>
+	<TableRow
+	    android:id="@+id/tableRow4"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	        android:id="@+id/InventoryNameTextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:paddingLeft="@dimen/padding_5dp"
+	        android:text="@string/text_view_inventory_name"
+	        android:textSize="@dimen/inventory_addPage_text_23sp" />
+
+	    <EditText
+	        android:id="@+id/AddInventoryNameEditText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="14"
+	        android:inputType="text"
+	        android:paddingRight="@dimen/padding_5dp" >
+
+	    </EditText>
+	</TableRow>
+	<TableRow
+	    android:id="@+id/tableRow5"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	        android:id="@+id/InventoryCompanyTextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:paddingLeft="@dimen/padding_5dp"
+	        android:text="@string/text_view_inventory_company"
+	        android:textSize="@dimen/inventory_addPage_text_23sp" />
+
+	    <EditText
+	        android:id="@+id/AddInventoryCompanyEditText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="14"
+	        android:inputType="text"
+	        android:paddingRight="@dimen/padding_5dp" >
+
+	    </EditText>
+	</TableRow>
+	<TableRow
+	    android:id="@+id/tableRow6"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	        android:id="@+id/InventoryVersionTextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:paddingLeft="@dimen/padding_5dp"
+	        android:text="@string/text_view_inventory_version"
+	        android:textSize="@dimen/inventory_addPage_text_23sp" />
+
+	    <EditText
+	        android:id="@+id/AddInventoryVersionEditText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="14"
+	        android:inputType="text"
+	        android:paddingRight="@dimen/padding_5dp" >
+
+	    </EditText>
+	</TableRow>
+	<TableRow
+	    android:id="@+id/tableRow7"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	        android:id="@+id/InventoryBuyDateTextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:paddingLeft="@dimen/padding_5dp"
+	        android:text="@string/text_view_inventory_buy_date"
+	        android:textSize="@dimen/inventory_addPage_text_23sp" />
+
+	    <EditText
+	        android:id="@+id/AddInventoryBuyDateEditText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="14"
+	        android:inputType="text"
+	        android:paddingRight="@dimen/padding_5dp" >
+
+	    </EditText>
+	</TableRow>
+	<TableRow
+	    android:id="@+id/tableRow8"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	        android:id="@+id/InventoryQtyTextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:paddingLeft="@dimen/padding_5dp"
+	        android:text="@string/text_view_inventory_qty"
+	        android:textSize="@dimen/inventory_addPage_text_23sp" />
+
+	    <EditText
+	        android:id="@+id/AddInventoryQtyEditText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="14"
+	        android:inputType="number"
+	        android:paddingRight="@dimen/padding_5dp" >
+
+	    </EditText>
+	</TableRow>
+
+	<TableRow
+	    android:id="@+id/tableRow9"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+
+		<Button
+		    android:id="@+id/AddInventoryToSQLButton"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:onClick="addInventory"
+		    android:text="@string/button_add_inventory" />
+
+	</TableRow>
+    
+</TableLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.inventorymanagement"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.inventorymanagement.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.SuccessActivity"
+            android:label="@string/title_activity_success" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.ErrorActivity"
+            android:label="@string/title_activity_error" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.AddInventoryActivity"
+            android:label="@string/title_activity_add_inventory" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.ReserveActivity"
+            android:label="@string/title_activity_reserve" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.HomePageActivity"
+            android:label="@string/title_activity_home_page" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.AddInventorySuccess"
+            android:label="@string/title_activity_add_inventory_success" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.AddInventorySuccessViewActivity"
+            android:label="@string/title_activity_add_inventory_success_view" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.EditInventoryActivity"
+            android:label="@string/title_activity_edit_inventory" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.EditOrderActivity"
+            android:label="@string/title_activity_edit_order" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.ListInventoryForEditActivity"
+            android:label="@string/title_activity_list_inventory_for_edit" >
+        </activity>
+        <activity
+            android:name="com.example.inventorymanagement.CameraActivity"
+            android:label="@string/title_activity_camera" >
+        </activity>
+    </application>
+
+</manifest>

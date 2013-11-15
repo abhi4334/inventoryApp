@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Inventory Management</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_text_view">Welcome</string>
+    <string name="login_id_text_view">ID</string>
+    <string name="password_text_view">Password</string>
+    <string name="button_login">Login</string>
+    <string name="dell_text_view">DELL</string>
+    <string name="hp_text_view">HP</string>
+    <string name="mac_text_view">MAC</string>
+    <string name="button_checkout">CheckOut</string>
+    <string name="order_confirmed_text_view">Order Confirmed.</string>
+    <string name="iPhone4s_check_box">iPhone 4s</string>
+    <string name="iPhone5_check_box">iPhone 5</string>
+    <string name="sansungS4_check_box">S4</string>
+    <string name="iPad_check_box">iPad</string>
+    <string name="android_check_box">Android</string>
+    <string name="kindle_check_box">Kindle</string>
+
+    <string-array name="inventory_items">
+        <item>Inventory</item>
+        <item>Laptop</item>
+        <item>Mobile</item>
+        <item>Tablet</item>
+    </string-array>
+
+    <string name="title_activity_success">SuccessActivity</string>
+    <string name="success_checkout_msg">Collect your order from IT desk.</string>
+    <string name="title_activity_error">ErrorActivity</string>
+    <string name="error_msg">Error Occurred</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button_back">Back</string>
+    <string name="button_add_inventory">Add Inventory</string>
+    <string name="button_edit_inventory">Edit Inventory</string>
+    <string name="button_reserve_inventory">Reserve</string>
+    <string name="button_edit_order">Edit Order</string>
+    <string name="button_cancel_order">Cancel Order</string>
+     <string name="button_camera">Take Photo</string>
+    
+    <string name="text_view_add_inventory">Add Inventory Page</string>
+    <string name="text_view_inventory_type">Type</string>
+    <string name="text_view_inventory_IMEI">IMEI/ID</string>
+    <string name="text_view_inventory_name">Product Name</string>
+    <string name="text_view_inventory_company">Company</string>
+    <string name="text_view_inventory_version">Version</string>
+    <string name="text_view_inventory_buy_date">Buy Date</string>
+    <string name="text_view_inventory_qty">Quantity</string>
+    <string name="title_activity_add_inventory">AddInventory</string>
+    <string name="title_activity_reserve">ReserveActivity</string>
+    <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="title_activity_add_inventory_success">AddInventorySuccess</string>
+    <string name="text_view_add_inventory_success_title">Inventory Added Successfully</string>
+    <string name="title_activity_add_inventory_success_view">AddInventorySuccessViewActivity</string>
+    <string name="text_view_reserve_inventory_title">Reserve Your Items</string>
+    <string name="button_home_page">Home</string>
+    <string name="title_activity_edit_inventory">Edit Inventory</string>
+    <string name="text_view_edit_inventory">Edit Inventory Page</string>
+    <string name="text_view_item_heading">Heading</string>
+    <string name="text_view_item_sub_heading">Sub Heading</string>
+    <string name="title_activity_edit_order">EditOrderActivity</string>
+    <string name="text_view_cancel_order_title">Cancel Your Order</string>
+    <string name="title_activity_list_inventory_for_edit">ListInventoryForEditActivity</string>
+    <string name="title_activity_camera">CameraActivity</string>
+
+</resources>
