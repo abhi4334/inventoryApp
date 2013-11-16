@@ -35,7 +35,7 @@ public class SuccessActivity extends Activity {
 		return true;
 	}
 	
-	public void goTOHomePage(View view)
+	public void goToHomePage(View view)
 	{
 		Intent intent = new Intent(this, HomePageActivity.class);
 		startActivity(intent);

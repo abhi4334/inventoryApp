@@ -19,6 +19,8 @@ import android.widget.CheckedTextView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.inventorymanagement.beans.InventoryInfo;
 
@@ -27,24 +29,33 @@ public class EditOrderActivity extends Activity {
 	private static String userName = null;
 	ListView cancelOrderListView;
 	Button cancelOrderButton;
-	DBTools dbtools = new DBTools(this.getApplicationContext());
+	TextView message;
+	DBTools dbtools;
 	
 	ArrayList<String> heading = new ArrayList<String>();
 	ArrayList<String> itemIdList = new ArrayList<String>();
 	ArrayList<String> selectedItems = new ArrayList<String>();
 	ArrayList<String> selectedItemIdList = new ArrayList<String>();
-
+	private final int VISIBLE = 0;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_edit_order);
+		dbtools = new DBTools(this.getApplicationContext());
 		Intent intent = getIntent();
 		userName = intent.getStringExtra("userName");
 		cancelOrderButton = (Button)findViewById(R.id.CancelOrderButton);
 		
 		ArrayList<InventoryInfo> reservedItemList = dbtools.getReservedItemForUser(userName);
 
-		for (InventoryInfo obj : reservedItemList) {heading.add(obj.getType() + ": " + obj.getCompany() + ", "+ obj.getName() + ", " + obj.getVersion());
+		if(reservedItemList.size() == 0)
+		{
+			message = (TextView)findViewById(R.id.NoReservedItemMessage);
+			message.setVisibility(VISIBLE);
+		}
+		for (InventoryInfo obj : reservedItemList) {
+			heading.add(obj.getType() + ": " + obj.getCompany() + ", "+ obj.getName() + ", " + obj.getVersion());
 			itemIdList.add(obj.getId());
 		}
 
@@ -57,7 +68,6 @@ public class EditOrderActivity extends Activity {
 		//Log.d("total entries", String.valueOf(resultMapList.size()));
 		cancelOrderListView = (ListView) findViewById(R.id.CancelOrderListView);
 		ListAdapter simpleAdpt = new SimpleAdapter(this, resultMapList,android.R.layout.simple_list_item_checked, new String[] {"heading", "subHeading" }, new int[] {android.R.id.text1, android.R.id.text2 });
-
 		cancelOrderListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 		cancelOrderListView.setAdapter(simpleAdpt);
 
@@ -81,10 +91,11 @@ public class EditOrderActivity extends Activity {
 					}
 				}
 
-				boolean isCanceled = dbtools.cancelOrder(selectedItems);
+				boolean isCanceled = dbtools.cancelOrder(selectedItemIdList);
 				if (isCanceled) {
 					Intent intent = new Intent(getApplicationContext(),
 			                EditOrderActivity.class);
+					 Toast.makeText(getApplicationContext(), "Items Cancelled", Toast.LENGTH_SHORT).show();
 					startActivity(intent);
 				}
 				else{
@@ -130,8 +141,5 @@ public class EditOrderActivity extends Activity {
 		startActivity(intent);
 	}
 
-	public void cancelOrder(View view) {
-
-	}
 
 }

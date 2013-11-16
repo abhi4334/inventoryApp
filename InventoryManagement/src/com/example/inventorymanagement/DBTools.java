@@ -2,9 +2,6 @@ package com.example.inventorymanagement;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
-
-import com.example.inventorymanagement.beans.InventoryInfo;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -12,6 +9,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import com.example.inventorymanagement.beans.InventoryInfo;
 
 public class DBTools extends SQLiteOpenHelper implements Serializable{
 
@@ -212,9 +211,9 @@ public class DBTools extends SQLiteOpenHelper implements Serializable{
 			SQLiteDatabase database = this.getWritableDatabase();
 			for (String itemId : selectedItemList) {
 				
-				Log.d("Item Id", itemId);
+				//Log.d("Item Id", itemId);
 				int newQty = Integer.parseInt(getInventoryById(itemId).getQty()) - 1;
-				Log.d("new Qty", String.valueOf(newQty));
+				//Log.d("new Qty", String.valueOf(newQty));
 				
 				/*//String query = "UPDATE "+TABLE_INVENTORY+ " SET "+KEY_QTY+" = "+String.valueOf(newQty)+", "+KEY_AVAILABLE+" = "+falseString+", "+KEY_RESERVEDBY+" = "+username+"' WHERE "+KEY_ID+"="+Integer.parseInt(itemId);
 				String query = "UPDATE "+TABLE_INVENTORY+ " SET "+KEY_QTY+" = "+"'"+String.valueOf(newQty)+"',"+KEY_AVAILABLE+" = "+"'"+falseString+"',"+KEY_RESERVEDBY+" = "+"'"+username+"' WHERE "+KEY_ID+"="+itemId;
@@ -229,7 +228,6 @@ public class DBTools extends SQLiteOpenHelper implements Serializable{
 			}
 			
 			isSuccess = true;
-			Log.d("isSuccess","True");
 		} catch (Exception e) {
 			isSuccess = false;
 			Log.d("Exception:",e.getMessage());
@@ -248,7 +246,7 @@ public class DBTools extends SQLiteOpenHelper implements Serializable{
 				values.put(KEY_QTY, String.valueOf(newQty));
 				values.put(KEY_AVAILABLE, trueString);
 				values.put(KEY_RESERVEDBY, adminname);
-				database.update(TABLE_INVENTORY, values, KEY_ID + " = ?",new String[] { itemId });
+				database.update(TABLE_INVENTORY, values, KEY_ID +"=?",new String[] {itemId});
 			}
 			
 			isSuccess = true;
@@ -266,8 +264,8 @@ public class DBTools extends SQLiteOpenHelper implements Serializable{
 		reserveItemList =new ArrayList<InventoryInfo>();
 		try{
 		SQLiteDatabase database = this.getReadableDatabase();
-		
-		String query = "SELECT * FROM "+TABLE_INVENTORY+" WHERE "+KEY_RESERVEDBY+"="+userName;
+		userName = "Abhi";
+		String query = "SELECT * FROM "+TABLE_INVENTORY+" WHERE "+KEY_RESERVEDBY+" = '"+userName+"'";
 		Cursor cursor = database.rawQuery(query, null);
 		if(cursor.moveToFirst())
 		{	

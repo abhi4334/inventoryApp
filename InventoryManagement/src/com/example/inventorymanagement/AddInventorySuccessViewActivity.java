@@ -45,6 +45,7 @@ public class AddInventorySuccessViewActivity extends Activity {
 	
 	public void goToHomePage(View view){
 		Intent intent = new Intent(this, HomePageActivity.class);
+		//intent.putExtra("userName", userName);
 		startActivity(intent);
 	}
 

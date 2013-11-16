@@ -24,6 +24,24 @@
 
     </TableRow>
     
+      <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        
+          <TextView
+            android:id="@+id/NoReservedItemMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_5dp"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/text_view_no_reserved_item_message" 
+            android:visibility="gone"/>
+        
+    </TableRow>
+    
+    
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"
@@ -54,8 +72,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/button_cancel_order"
-            android:layout_weight="1"
-            android:onClick="cancelOrder" />
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/CancelOrderToHomeButton"

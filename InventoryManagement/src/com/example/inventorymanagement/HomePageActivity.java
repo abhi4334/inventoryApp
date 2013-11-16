@@ -47,9 +47,10 @@ public class HomePageActivity extends Activity {
 	}
 	
 	public void EditOrder(View view)
-	
 	{
-		
+		Intent intent = new Intent(this, EditOrderActivity.class);
+		intent.putExtra("userName",userName);
+	    startActivity(intent);
 	}
 	
 	public void startCamera(View view) {

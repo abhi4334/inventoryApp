@@ -63,5 +63,7 @@
     <string name="text_view_cancel_order_title">Cancel Your Order</string>
     <string name="title_activity_list_inventory_for_edit">ListInventoryForEditActivity</string>
     <string name="title_activity_camera">CameraActivity</string>
+    
+    <string name="text_view_no_reserved_item_message">You do not have reserved items.</string>
 
 </resources>
