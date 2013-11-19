@@ -12,12 +12,14 @@ import android.widget.TextView;
 public class SuccessActivity extends Activity {
 
 	TextView orderMsg;
+	String userName;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_success);
 		
+		userName = getIntent().getStringExtra("userName");
 		orderMsg = (TextView) findViewById(R.id.orderTextView);
 		Bundle b = getIntent().getExtras();
         String[] resultArr = b.getStringArray("selectedItems");
@@ -38,6 +40,7 @@ public class SuccessActivity extends Activity {
 	public void goToHomePage(View view)
 	{
 		Intent intent = new Intent(this, HomePageActivity.class);
+		intent.putExtra("userName", userName);
 		startActivity(intent);
 	}
 

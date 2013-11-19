@@ -22,7 +22,7 @@ public class DBTools extends SQLiteOpenHelper implements Serializable{
 	private String reservedBy = "admin";
 	private String falseString = "false";
 	private String trueString = "true";
-	private String username = "Abhi";
+	//private String username = "abhi";
 	private String adminname = "admin";
 	private String stringZero = "0";
 
@@ -205,7 +205,7 @@ public class DBTools extends SQLiteOpenHelper implements Serializable{
 		return recentlyAddedItem;
 	}
 	
-	public boolean reserveItems(ArrayList<String> selectedItemList) {
+	public boolean reserveItems(ArrayList<String> selectedItemList, String userName) {
 		boolean isSuccess = false;
 		try {
 			SQLiteDatabase database = this.getWritableDatabase();
@@ -223,7 +223,7 @@ public class DBTools extends SQLiteOpenHelper implements Serializable{
 				ContentValues values = new ContentValues();
 				values.put(KEY_QTY, String.valueOf(newQty));
 				values.put(KEY_AVAILABLE, falseString);
-				values.put(KEY_RESERVEDBY, username);
+				values.put(KEY_RESERVEDBY, userName);
 				database.update(TABLE_INVENTORY, values, KEY_ID +"=?",new String[] {itemId});
 			}
 			

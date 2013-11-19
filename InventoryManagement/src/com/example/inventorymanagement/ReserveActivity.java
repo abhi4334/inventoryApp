@@ -28,6 +28,7 @@ import com.example.inventorymanagement.beans.InventoryInfo;
 
 public class ReserveActivity extends Activity {
 	
+	private String userName;
 	ListView reservePageListView;
 	//SparseBooleanArray checked;
 	TextView itemIdTextView;
@@ -42,6 +43,8 @@ public class ReserveActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_reserve);
 		
+		Intent intent = getIntent();
+		userName= intent.getStringExtra("userName");
 		final DBTools dbtools = new DBTools(this.getApplicationContext());
 		reserveButton = (Button)findViewById(R.id.ReserveButton);
 		ArrayList<InventoryInfo> allPhoneList = dbtools.getAllPhoneList();
@@ -108,11 +111,13 @@ public class ReserveActivity extends Activity {
 		        for (int i = 0; i < selectedItems.size(); i++) {
 		            outputStrArr[i] = selectedItems.get(i);
 		        }
-		        for(String id:selectedItemIdList)
+		        
+		        /*for(String id:selectedItemIdList)
 				{
 					Log.d("SID:",id);
-				}
-		        boolean isReserved = dbtools.reserveItems(selectedItemIdList);
+				}*/
+		        
+		        boolean isReserved = dbtools.reserveItems(selectedItemIdList,userName);
 		        if(isReserved)
 		        {
 		        Intent intent = new Intent(getApplicationContext(),
@@ -123,6 +128,7 @@ public class ReserveActivity extends Activity {
 		        b.putStringArray("selectedItems", outputStrArr);
 		        // Add the bundle to the intent.
 		        intent.putExtras(b);
+		        intent.putExtra("userName",userName);
 		        // start the ResultActivity
 		        startActivity(intent);
 		        }

@@ -28,6 +28,7 @@ public class HomePageActivity extends Activity {
 	public void OpenReservePage(View view)
 	{
 		Intent intent = new Intent(this, ReserveActivity.class);
+		intent.putExtra("userName",userName);
 		startActivity(intent);
 		
 	}

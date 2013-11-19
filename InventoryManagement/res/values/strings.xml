@@ -37,8 +37,8 @@
     <string name="button_reserve_inventory">Reserve</string>
     <string name="button_edit_order">Edit Order</string>
     <string name="button_cancel_order">Cancel Order</string>
-     <string name="button_camera">Take Photo</string>
-    
+    <string name="button_camera">Take Photo</string>
+    <string name="button_print_image">Print Image</string>
     <string name="text_view_add_inventory">Add Inventory Page</string>
     <string name="text_view_inventory_type">Type</string>
     <string name="text_view_inventory_IMEI">IMEI/ID</string>
@@ -63,7 +63,9 @@
     <string name="text_view_cancel_order_title">Cancel Your Order</string>
     <string name="title_activity_list_inventory_for_edit">ListInventoryForEditActivity</string>
     <string name="title_activity_camera">CameraActivity</string>
-    
     <string name="text_view_no_reserved_item_message">You do not have reserved items.</string>
+    <string name="title_activity_print_image">PrintImageActivity</string>
+    
+    <string name="description_infostretch">Infostretch</string>
 
 </resources>

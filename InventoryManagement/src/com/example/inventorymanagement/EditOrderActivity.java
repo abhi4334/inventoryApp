@@ -140,6 +140,4 @@ public class EditOrderActivity extends Activity {
 		Intent intent = new Intent(this, HomePageActivity.class);
 		startActivity(intent);
 	}
-
-
 }
